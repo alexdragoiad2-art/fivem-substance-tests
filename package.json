@@ -1,0 +1,10 @@
+{
+  "name": "fivem-substance-tests",
+  "version": "1.0.0",
+  "description": "FiveM (ESX) resource: server-side blood alcohol model, breathalyzer & saliva drug tests for police roleplay, with SQL logging and a JavaScript NUI.",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}

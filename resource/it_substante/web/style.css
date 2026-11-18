@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Share+Tech+Mono&display=swap');
+
+html, body { margin: 0; padding: 0; background: transparent !important; overflow: hidden; font-family: 'Inter', sans-serif; }
+.hidden { display: none !important; }
+
+.device {
+  position: fixed; right: 4vh; bottom: 6vh;
+  display: flex; align-items: flex-end; gap: 1.6vh;
+  animation: in .35s ease-out;
+  filter: drop-shadow(0 1.2vh 2.4vh rgba(0,0,0,.55));
+}
+@keyframes in { from { transform: translateY(3vh); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ===== etilotest ===== */
+.br-body {
+  width: 24vh; padding: 1.6vh 1.6vh 2.4vh; position: relative;
+  border-radius: 3.2vh 3.2vh 5vh 5vh;
+  background: linear-gradient(160deg, #ffd23a 0%, #f2b705 45%, #c98e00 100%);
+  box-shadow: inset 0 .3vh .4vh rgba(255,255,255,.55), inset 0 -.6vh 1vh rgba(0,0,0,.25);
+}
+.br-top { display: flex; justify-content: space-between; align-items: baseline; padding: 0 .6vh .9vh; }
+.br-brand { font-weight: 800; font-size: 1.55vh; letter-spacing: .12vh; color: #1b1b1b; }
+.br-brand b { color: #b8000b; }
+.br-model { font-size: 1.05vh; font-weight: 700; color: rgba(0,0,0,.55); }
+.br-lcd {
+  border-radius: 1vh; padding: 1.2vh 1.2vh 1vh;
+  background: linear-gradient(180deg, #b9c9a3, #9fb287);
+  box-shadow: inset 0 .4vh .8vh rgba(0,0,0,.45), 0 0 0 .5vh #1d1d1d;
+  font-family: 'Share Tech Mono', monospace; color: #1c2a12;
+}
+.lcd-row.small { font-size: 1.25vh; letter-spacing: .1vh; min-height: 1.6vh; }
+.lcd-big { font-size: 5.4vh; line-height: 1; text-align: right; margin-top: .4vh; text-shadow: .15vh .15vh 0 rgba(0,0,0,.12); }
+.lcd-unit { text-align: right; font-size: 1.4vh; margin-top: -.2vh; }
+.lcd-bar { height: .9vh; margin: .9vh 0 .6vh; border: .15vh solid #1c2a12; border-radius: .3vh; overflow: hidden; }
+.lcd-bar i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, #1c2a12 0 .8vh, transparent .8vh 1.1vh); }
+.br-keys { display: flex; justify-content: center; gap: 1.2vh; margin-top: 1.4vh; }
+.br-keys span { width: 3.2vh; height: 1.5vh; border-radius: .8vh; background: #262626; box-shadow: inset 0 .25vh .2vh rgba(255,255,255,.18); }
+.br-keys span.ok { background: #0f7a35; }
+.br-mouth {
+  position: absolute; top: -2.6vh; left: 50%; transform: translateX(-50%);
+  width: 3vh; height: 3.4vh; border-radius: .8vh .8vh .3vh .3vh;
+  background: linear-gradient(90deg, #e9eef2, #ffffff 40%, #c9d1d8);
+  box-shadow: inset 0 -.4vh .4vh rgba(0,0,0,.15);
+}
+.lcd-blink { animation: blink 1s steps(2, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
+
+/* ===== drugtest ===== */
+.dr-body {
+  width: 26vh; padding: 1.4vh; border-radius: 1.6vh;
+  background: linear-gradient(180deg, #ffffff, #e8ecef);
+  box-shadow: inset 0 -.5vh .8vh rgba(0,0,0,.12), 0 0 0 .25vh #c9d0d6;
+}
+.dr-head { display: flex; flex-direction: column; padding: 0 .4vh 1vh; }
+.dr-head span { font-weight: 800; font-size: 1.6vh; color: #0b3d91; letter-spacing: .1vh; }
+.dr-head span b { color: #d0021b; }
+.dr-head small { font-size: 1.05vh; color: #6b7785; font-weight: 600; }
+.dr-strips { display: grid; grid-template-columns: repeat(6, 1fr); gap: .7vh; }
+.strip { display: flex; flex-direction: column; align-items: center; gap: .5vh; }
+.strip .win {
+  width: 100%; height: 9vh; border-radius: .6vh; position: relative;
+  background: linear-gradient(180deg, #f6f1ea, #efe7dc);
+  box-shadow: inset 0 .25vh .5vh rgba(0,0,0,.25);
+}
+.strip .ln { position: absolute; left: 18%; right: 18%; height: .45vh; border-radius: .2vh; background: #c2185b; opacity: 0; transition: opacity 1.8s ease; }
+.strip .ln.c { top: 22%; } .strip .ln.t { top: 62%; }
+.strip.wet .win { background: linear-gradient(180deg, #f3d9e2, #efe7dc 70%); transition: background 2s; }
+.strip .code { font-weight: 800; font-size: 1.15vh; color: #24303c; }
+.strip .lbl { font-size: .85vh; color: #6b7785; text-align: center; min-height: 1.8vh; }
+.dr-foot { margin-top: 1vh; font-size: 1.25vh; font-weight: 700; color: #24303c; text-align: center; }
+
+/* ===== bonul cu rezultatul ===== */
+.slip {
+  width: 21vh; padding: 1.4vh 1.4vh 1.8vh; background: #fbfaf6; color: #222;
+  font-family: 'Share Tech Mono', monospace; font-size: 1.2vh; line-height: 1.45;
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 95% 100%, 90% 96%, 85% 100%, 80% 96%, 75% 100%, 70% 96%, 65% 100%, 60% 96%, 55% 100%, 50% 96%, 45% 100%, 40% 96%, 35% 100%, 30% 96%, 25% 100%, 20% 96%, 15% 100%, 10% 96%, 5% 100%, 0 96%);
+  animation: print 1.4s ease-out;
+}
+@keyframes print { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+.slip h4 { margin: 0 0 .6vh; text-align: center; font-size: 1.3vh; border-bottom: .15vh dashed #999; padding-bottom: .6vh; }
+.slip .v { font-size: 2.2vh; text-align: center; margin: .8vh 0; font-weight: 700; }
+.slip .neg { color: #0f7a35; } .slip .pos { color: #b8000b; }
+.slip .legal { font-family: 'Inter', sans-serif; font-size: 1.05vh; margin-top: .8vh; border-top: .15vh dashed #999; padding-top: .6vh; }

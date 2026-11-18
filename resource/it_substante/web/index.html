@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>it_substante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- etilotest: corp de aparat portabil, ecran LCD -->
+  <div id="breath" class="device hidden">
+    <div class="br-body">
+      <div class="br-top"><span class="br-brand">ALCO<b>TEST</b></span><span class="br-model">IT-7510</span></div>
+      <div class="br-lcd">
+        <div class="lcd-row small" id="brStatus">PREGĂTIRE</div>
+        <div class="lcd-big" id="brValue">-.--</div>
+        <div class="lcd-unit" id="brUnit">mg/L</div>
+        <div class="lcd-bar"><i id="brBar"></i></div>
+        <div class="lcd-row small" id="brFoot">&nbsp;</div>
+      </div>
+      <div class="br-keys"><span></span><span class="ok"></span><span></span></div>
+      <div class="br-mouth"></div>
+    </div>
+    <div class="slip hidden" id="brSlip"></div>
+  </div>
+
+  <!-- drugtest: caseta salivara cu ferestre de rezultat -->
+  <div id="drug" class="device hidden">
+    <div class="dr-body">
+      <div class="dr-head"><span>DRUG<b>CHECK</b></span><small>test salivar · 6 substanțe</small></div>
+      <div class="dr-strips" id="drStrips"></div>
+      <div class="dr-foot" id="drFoot">Se citește proba...</div>
+    </div>
+    <div class="slip hidden" id="drSlip"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
